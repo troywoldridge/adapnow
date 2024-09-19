@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class QuantitySeeder extends Seeder
+class QuantitiesSeeder extends Seeder
 {
     /**
      * Run the database seeds for the quantities table.
