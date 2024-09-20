@@ -14,6 +14,29 @@ class Product extends Model
     // Specify the table if it doesn't follow Laravel's default naming convention
     protected $table = 'products'; // This can be omitted if your table is named 'products' by convention
 
+
+    // Define the relationships with other tables
+    public function stock()
+    {
+        return $this->belongsTo(ProductStock::class, 'product_stock_id');
+    }
+
+    public function size()
+    {
+        return $this->belongsTo(Size::class, 'size_id');
+    }
+
+    public function coating()
+    {
+        return $this->belongsTo(Coating::class, 'coating_id');
+    }
+
+    public function quantity()
+    {
+        return $this->belongsTo(Quantity::class, 'quantity_id');
+    }
+
+
     // Specify which fields can be mass assigned
     protected $fillable = [
         'category_id',
@@ -59,5 +82,7 @@ class Product extends Model
             $this->image5
         ]);
     }
+
+    
 }
 

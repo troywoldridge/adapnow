@@ -1,6 +1,5 @@
-<!-- navbar.blade.php -->
-
 <!-- Top bar with account links -->
+
 <div class="top-bar">
     <div class="top-bar-right">
         <a href="/account" class="navbar-right-link">My Account</a>
@@ -11,15 +10,16 @@
 
 <nav class="navbar">
     <div class="navbar-container">
-        <div class="logo">
-            <a href="/">American Design And Printing | Wholesale Printing</a>
+        <!-- Logo Section -->
+        <div class="logo img">
+            <a href="/"><img src="{{ asset('images/patriotic/american-design-and-printing-logo-1.webp') }}" alt="American Design and Printing" style="max-height: 50px;"></a>
         </div>
         <ul class="navbar-links">
             <!-- Business Cards Dropdown -->
             <li class="dropdown">
                 <a href="#">Business Cards</a>
                 <ul class="dropdown-content">
-                    <li><a href="#">Standard Cards</a></li>
+                    <li><a href="{{ route('business-cards') }}">Standard Business Cards</a>
                     <li><a href="#">Premium Cards</a></li>
                 </ul>
             </li>
@@ -136,12 +136,12 @@
                 </ul>
             </li>
 
-        <!-- Search Form and Right Links (My Account, My Cart, Track Order) -->
-        <div class="navbar-right">
-            <form action="/search" method="GET" class="search-form">
-                <input type="text" name="query" placeholder="Search...">
-                <button type="submit"><i class="fas fa-search"></i></button>
-            </form>
+        <!-- Right-side (Search and Account links) -->
+            <div class="navbar-right">
+                <form action="/search" method="GET" class="search-form">
+                     <input type="text" name="query" placeholder="Search...">
+                     <button type="submit"><i class="fas fa-search"></i></button>
+                 </form>
+            </div>
         </div>
-    </div>
 </nav>

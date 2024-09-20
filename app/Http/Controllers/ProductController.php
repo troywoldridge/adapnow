@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use App\Models\ProductStock;    // Import the ProductStock model
+use App\Models\Size;            // Import the Size model
+//use App\Models\Coating;         // Import the Coating model
+use App\Models\Quantity;        // Import the Quantity model
 use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
@@ -56,4 +60,30 @@ class ProductController extends Controller
 
         return back()->withErrors(['error' => 'Please upload a valid CSV file.']);
     }
+
+    public function showBusinessCards()
+    {
+        // Fetching products with subcategory_id = 26 (Standard Business Cards)
+        $businessCards = Product::where('subcategory_id', 26)->get();
+
+        // Return the view 'business_cards.index' with the products data
+        return view('business_cards.index', compact('businessCards'));
+    }
+
+    // Show business card details page
+    public function showCardDetails($slug)
+    {
+        // Fetch the business card product by slug
+        $businessCard = Product::where('slug', $slug)->firstOrFail();
+
+        // Fetch available stocks, sizes, coatings, and quantities for the dropdowns
+        $stocks = ProductStock::all();
+        $sizes = Size::all();
+       // $coatings = Coating::all();
+        $quantities = Quantity::all();
+
+        // Pass all data to the view
+        return view('business_cards.detail', compact('businessCard', 'stocks', 'sizes', 'quantities'));
+    }
+
 }
