@@ -20,19 +20,26 @@ class ImageSeeder extends Seeder
             return;
         }
 
-        // Retrieve all image files
+        // Retrieve all image files from the directory
         $imageFiles = File::allFiles($imagePath);
+
+        // Debug: Show how many images were found in the directory
+        $this->command->info("Total images found: " . count($imageFiles));
 
         // Get all products from the database
         $products = DB::table('products')->get();
 
         foreach ($products as $product) {
-            $productSlug = Str::slug($product->slug);
+            // Convert product slug to lowercase to avoid case sensitivity issues
+            $productSlug = strtolower(Str::slug($product->slug));
             $matchedImages = [];
+
+            // Debug: Show the current product slug being processed
+            $this->command->info("Processing product with slug: " . $productSlug);
 
             // Check for primary image (either exact match or with -main suffix)
             foreach ($imageFiles as $file) {
-                $fileName = pathinfo($file->getFilename(), PATHINFO_FILENAME);
+                $fileName = strtolower(pathinfo($file->getFilename(), PATHINFO_FILENAME)); // Convert filename to lowercase
 
                 // Match primary image
                 if ($fileName === $productSlug || $fileName === $productSlug . '-main') {
@@ -48,6 +55,13 @@ class ImageSeeder extends Seeder
                 }
             }
 
+            // Debug: Show which images were matched for the product
+            if ($matchedImages) {
+                $this->command->info("Images found for product '{$product->name}': " . implode(", ", $matchedImages));
+            } else {
+                $this->command->info("No images found for product '{$product->name}'");
+            }
+
             // Update the product with the matched images (up to 5)
             DB::table('products')->where('id', $product->id)->update([
                 'image' => $matchedImages[0] ?? null,
@@ -57,6 +71,7 @@ class ImageSeeder extends Seeder
                 'image_5' => $matchedImages[4] ?? null,
             ]);
 
+            // Debug: Confirm update for the product
             $this->command->info("Images for product '{$product->name}' updated successfully.");
         }
 

@@ -5,8 +5,10 @@
         <h2>{{ $businessCard->name }}</h2>
         <div class="row">
             <div class="col-md-8">
-                <img src="{{ asset('images/' . $businessCard->image) }}" class="img-fluid" alt="{{ $businessCard->name }}">
+                <img src="{{ asset('images/all-images/' ) }}" class="img-fluid" alt="{{ $businessCard->name }}">
                 <p>{{ $businessCard->description }}</p>
+                
+
             </div>
             <div class="col-md-4">
                 <h4>Price: ${{ $businessCard->price }}</h4>
@@ -26,19 +28,17 @@
                     <label for="size">Size:</label>
                     <select class="form-control" id="size" name="size">
                         @foreach($sizes as $size)
-                            <option value="{{ $size->id }}">{{ $size->name }}</option>
+                            <option value="{{ $size->id }}">{{ $size->width }} x {{ $size->height }} {{ $size->unit }}</option>
                         @endforeach
                     </select>
                 </div>
-
-               
 
                 <!-- Quantity Dropdown -->
                 <div class="form-group">
                     <label for="quantity">Quantity:</label>
                     <select class="form-control" id="quantity" name="quantity">
                         @foreach($quantities as $quantity)
-                            <option value="{{ $quantity->id }}">{{ $quantity->name }}</option>
+                            <option value="{{ $quantity->id }}">{{ $quantity->quantity_value }}</option>
                         @endforeach
                     </select>
                 </div>
