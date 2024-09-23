@@ -1,0 +1,146 @@
+@extends('layouts.main')
+
+@section('content')
+<div class="container product-page">
+    <div class="row">
+        <!-- Product Image -->
+        <div class="col-md-6">
+            <img src="{{ asset('images/all-images/die-cut-business-cards.png') }}" class="img-fluid" alt="Die Cut Business Cards">
+        </div>
+
+        <!-- Product Details and Order Form -->
+        <div class="col-md-6">
+            <h1>Die Cut Business Cards</h1>
+            <p>Our die-cut business cards offer unique shapes like rounded corners, oval, or leaf shapes to help you stand out and make a lasting impression.</p>
+            
+            <div class="product-order-box">
+                <h4>Price this item:</h4>
+                <form>
+
+                    <!-- Stock Dropdown -->
+                    <div class="form-group">
+                        <label for="stock">Stock</label>
+                        <select id="stock" class="form-control">
+                            <option value="single">14pt Single Side Printing (4/0)</option>
+                            <option value="double">14pt Double Sided Printing (4/4)</option>
+                            <option value="single">16pt Single Side printing (4/0)</option>
+                            <option value="double">16pt Double Sided Printing (4/4)</option>
+
+                        </select>
+                    </div>
+
+                    <!-- Size Dropdown -->
+                    <div class="form-group">
+                        <label for="size">Size</label>
+                        <select id="size" class="form-control">
+                            <option value="3.5x2">3.5 x 2 inches</option>
+                            <option value="custom">Custom Shape</option> <!-- Added custom shape option -->
+                        </select>
+                    </div>
+
+                    <!-- Quantity Dropdown -->
+                    <div class="form-group">
+                        <label for="qty">Quantity</label>
+                        <select id="qty" class="form-control">
+                            <option value="100">100</option>
+                            <option value="250">250</option>
+                            <option value="500">500</option>
+                            <option value="1000">1000</option>
+                            <option value="2500">2500</option>
+                            <option value="5000">5000</option>
+                            <option value="10000">10000</option>
+                            <option value="15000">15000</option>
+                            <option value="20000">20000</option>
+                            <option value="25000">25000</option>
+                        </select>
+                    </div>
+
+                    <!-- Coating Dropdown -->
+                    <div class="form-group">
+                        <label for="coating">Coating</label>
+                        <select id="coating" class="form-control">
+                            <option value="matte">Matte Finish</option>
+                            <option value="gloss">Gloss Finish</option> <!-- Added option for specialty gloss -->
+                        </select>
+                    </div>
+
+                    <!-- Sets Dropdown -->
+                    <div class="form-group">
+                        <label for="sets">Sets</label>
+                        <select id="sets" class="form-control">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div>
+
+                    <!-- Price -->
+                    <div class="product-price">
+                        <h4>Regular Price:</h4>
+                        <p>$25.00</p> <!-- Adjust the price for the specialty card -->
+                    </div>
+
+                    <!-- Add to Cart Button -->
+                    <button type="button" class="btn btn-primary">Add to Cart</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tabs for Details, File Prep, and Reviews -->
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <ul class="nav nav-tabs" id="productTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="details-tab" data-toggle="tab" href="#details" role="tab">Details</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="fileprep-tab" data-toggle="tab" href="#fileprep" role="tab">File Prep</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="reviews-tab" data-toggle="tab" href="#reviews" role="tab">Reviews</a>
+                </li>
+            </ul>
+
+            <div class="tab-content" id="productTabContent">
+                <!-- Details Tab -->
+                <div class="tab-pane fade show active" id="details" role="tabpanel">
+                    <h5>Product Details for Die Cut Business Cards</h5>
+                    <p><strong>Paper Type:</strong> 95 Bright 14pt or  16pt C2S Stock</p>
+                    <p><strong>Sizes:</strong> 3.5" x 2" or custom shape</p>
+                    <p><strong>Coating:</strong> Matte or Gloss Finish</p>
+                    <p><strong>Finishing:</strong> Custom die-cut to your shape and boxed</p>
+                    <p><strong>Quantities:</strong> 100 - 25,000</p>
+                </div>
+
+                <!-- File Prep Tab -->
+                <div class="tab-pane fade" id="fileprep" role="tabpanel">
+                    <h5>File Prep for Die Cut Business Cards</h5>
+                    <p>Make sure your file meets the following specifications:</p>
+                    <ul>
+                        <li>Resolution: 300 DPI</li>
+                        <li>Bleed: 1/16 inch on all sides</li>
+                        <li>Color Mode: CMYK</li>
+                        <li>File Type: PDF format with bleeds</li>
+                    </ul>
+                </div>
+
+                <!-- Reviews Tab -->
+                <div class="tab-pane fade" id="reviews" role="tabpanel">
+                    <h5>Customer Reviews</h5>
+                    <p>★★★★★ "The unique shape really helped us stand out!"</p>
+                    <p>★★★★ "Great quality, fast shipping."</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection

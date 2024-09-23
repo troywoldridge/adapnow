@@ -1,5 +1,4 @@
 <!-- Top bar with account links -->
-
 <div class="top-bar">
     <div class="top-bar-right">
         <a href="/account" class="navbar-right-link">My Account</a>
@@ -14,13 +13,15 @@
         <div class="logo img">
             <a href="/"><img src="{{ asset('images/patriotic/american-design-and-printing-logo-1.webp') }}" alt="American Design and Printing" style="max-height: 50px;"></a>
         </div>
+
+        <!-- Navbar Links -->
         <ul class="navbar-links">
             <!-- Business Cards Dropdown -->
             <li class="dropdown">
                 <a href="#">Business Cards</a>
                 <ul class="dropdown-content">
-                    <li><a href="{{ route('business-cards') }}">Standard Business Cards</a>
-                    <li><a href="#">Premium Cards</a></li>
+                    <li><a href="{{ route('business-cards') }}">Standard Business Cards</a></li>
+                    <li><a href="{{ route('specialty-business-cards.specialty') }}">Specialty Business Cards</a></li>
                 </ul>
             </li>
 
@@ -28,29 +29,29 @@
             <li class="dropdown">
                 <a href="#">Print Products</a>
                 <ul class="dropdown-content">
-                    <li><a href="#">Postcards</a></li>
-                    <li><a href="#">Flyers</a></li>
-                    <li><a href="#">Brochures</a></li>
-                    <li><a href="#">Bookmark</a></li>
-                    <li><a href="#">Presentation Folders</a></li>
-                    <li><a href="#">Booklets</a></li>
-                    <li><a href="#">Magnets</a></li>
-                    <li><a href="#">Greeting Cards</a></li>
-                    <li><a href="#">Invitations / Announcements</a></li>
-                    <li><a href="#">Numbered Tickets</a></li>
-                    <li><a href="#">Wall Calendars</a></li>
-                    <li><a href="#">Variable Printing</a></li>
-                    <li><a href="#">Posters</a></li>
-                    <li><a href="#">Door Hangers</a></li>
-                    <li><a href="#">Digital Sheets</a></li>
-                    <li><a href="#">Folded Business Cards</a></li>
-                    <li><a href="#">Tent Cards</a></li>
-                    <li><a href="#">Plastics</a></li>
-                    <li><a href="#">Tear Cards</a></li>
-                    <li><a href="#">Clings</a></li>
+                    <li><a href="{{ route('print-products.postcards') }}">Postcards</a></li>
+                    <li><a href="{{ route('print-products.flyers') }}">Flyers</a></li>
+                    <li><a href="{{ route('print-products.brochures') }}">Brochures</a></li>
+                    <li><a href="{{ route('print-products.bookmarks') }}">Bookmarks</a></li>
+                    <li><a href="{{ route('print-products.presentation-folders') }}">Presentation Folders</a></li>
+                    <li><a href="{{ route('print-products.booklets') }}">Booklets</a></li>
+                    <li><a href="{{ route('print-products.magnets') }}">Magnets</a></li>
+                    <li><a href="{{ route('print-products.greeting-cards') }}">Greeting Cards</a></li>
+                    <li><a href="{{ route('print-products.invitations') }}">Invitations / Announcements</a></li>
+                    <li><a href="{{ route('print-products.numbered-tickets') }}">Numbered Tickets</a></li>
+                    <li><a href="{{ route('print-products.wall-calendars') }}">Wall Calendars</a></li>
+                    <li><a href="{{ route('print-products.variable-printing') }}">Variable Printing</a></li>
+                    <li><a href="{{ route('print-products.posters') }}">Posters</a></li>
+                    <li><a href="{{ route('print-products.door-hangers') }}">Door Hangers</a></li>
+                    <li><a href="{{ route('print-products.digital-sheets') }}">Digital Sheets</a></li>
+                    <li><a href="{{ route('print-products.folded-business-cards') }}">Folded Business Cards</a></li>
+                    <li><a href="{{ route('print-products.tent-cards') }}">Tent Cards</a></li>
+                    <li><a href="{{ route('print-products.plastics') }}">Plastics</a></li>
+                    <li><a href="{{ route('print-products.tear-cards') }}">Tear Cards</a></li>
+                    <li><a href="{{ route('print-products.clings') }}">Clings</a></li>
                 </ul>
             </li>
-
+            
             <!-- Large Format Dropdown -->
             <li class="dropdown">
                 <a href="#">Large Format</a>

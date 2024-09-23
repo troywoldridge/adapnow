@@ -65,14 +65,12 @@ body {
     list-style: none;
     display: flex;
     justify-content: center;
-    flex-grow: 1;
     gap: 20px;
     position: relative;
 }
 
 .navbar-links li {
     position: relative;
-    display: inline-block;
 }
 
 .navbar-links li a {
@@ -94,20 +92,20 @@ body {
     display: none;
     position: absolute;
     background-color: #fff;
+    color: #000;
     min-width: 200px;
     padding: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
-    z-index: 1000;
+    z-index: 1000;  /* Ensure dropdown appears on top */
     left: 0;
-    top: 100%; /* Align below the menu item */
-    width: auto; /* Allow width to adjust based on content */
+    top: 100%;  /* Align below the parent */
+    width: auto; 
     opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
+    visibility: hidden;  /* Ensure it's hidden when not hovered */
+    transform: translateY(10px);  /* Slight offset for animation */
     transition: all 0.3s ease-in-out;
 }
-
 
 .navbar-links li:hover .dropdown-content {
     display: block;
@@ -116,9 +114,10 @@ body {
     transform: translateY(0);
 }
 
+/* Dropdown links styling */
 .dropdown-content a {
-    color: #333;
-    background-color: #fff;
+    color: #333; /* Ensure default text color is dark */
+    background-color: #fff; /* Ensure background is white */
     text-decoration: none;
     padding: 10px 15px;
     display: block;
@@ -129,16 +128,8 @@ body {
 
 .dropdown-content a:hover {
     background-color: #004aad;
-    color: fff;
+    color: #fff;
 }
-
-/* Dropdown item text color and background */
-.dropdown-content option {
-    color: #000;
-    background-color: #fff;
-}
-
-
 
 /* Right Section (Search & Account) */
 .navbar-right {
@@ -206,7 +197,6 @@ body {
     background-color: #f8f8f8;
     padding-top: 20px;
     text-align: center;
-    margin-top: 0;
 }
 
 .product-categories h2 {
@@ -265,7 +255,6 @@ body {
 .product-item a:hover {
     background-color: #003b8d;
 }
-
 
 /* Footer Styling */
 .footer {
