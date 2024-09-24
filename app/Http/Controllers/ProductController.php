@@ -96,12 +96,6 @@ class ProductController extends Controller
         }
     
     
-        // Method to show Brochures page
-        public function showBrochures()
-        {
-            return view('print-products.brochures');
-        }
-    
         // Method to show Bookmarks page
         public function showBookmarks()
         {
@@ -110,28 +104,16 @@ class ProductController extends Controller
     
         // Method to show Presentation Folders page
         public function showPresentationFolders()
-        {
-            return view('print-products.presentation-folders');
-        }
+{
+    return view('print-products.presentation-folders.presentation-folders');
+}
     
         // Method to show Booklets page
         public function showBooklets()
         {
             return view('print-products.booklets');
         }
-    
-        // Method to show Magnets page
-        public function showMagnets()
-        {
-            return view('print-products.magnets');
-        }
-    
-        // Method to show Greeting Cards page
-        public function showGreetingCards()
-        {
-            return view('print-products.greeting-cards');
-        }
-    
+        
         // Method to show Invitations / Announcements page
         public function showInvitations()
         {
@@ -334,7 +316,129 @@ public function showLinenFlyers()
 }
 
 
+    // Show the main brochures page
+    public function showBrochures()
+    {
+        return view('print-products.brochures.brochures'); // Correct path for brochures
     }
-    
+
+    // Show Gloss Text Brochures
+    public function showGlossTextBrochures()
+    {
+        return view('print-products.brochures.gloss-text'); // Correct path for gloss text brochures
+    }
+
+    // Show Matte Finish Brochures
+    public function showMatteFinishBrochures()
+    {
+        return view('print-products.brochures.matte-finish'); // Correct path for matte finish brochures
+    }
+
+    // Show UV High Gloss Brochures
+    public function showUVHighGlossBrochures()
+    {
+        return view('print-products.brochures.uv-high-gloss'); // Correct path for UV high gloss brochures
+    }
+
+    // Presentation Folders Overview Page
 
 
+// Individual Folder Pages
+public function showStandardMatteFolder()
+{
+    return view('print-products.presentation-folders.standard-matte');
+}
+
+public function showStandardUVFolder()
+{
+    return view('print-products.presentation-folders.standard-uv');
+}
+
+public function showMatteLaminatedFolder()
+{
+    return view('print-products.presentation-folders.matte-laminated');
+}
+
+public function showMetallicFoilFolder()
+{
+    return view('print-products.presentation-folders.metallic-foil');
+}
+
+// Magnets Overview Page
+public function showMagnets()
+{
+    return view('print-products.magnets.magnets');
+}
+
+// Individual Magnet Pages
+public function showStandardMagnets()
+{
+    return view('print-products.magnets.standard-magnets');
+}
+
+public function showCutToShapeMagnets()
+{
+    return view('print-products.magnets.cut-to-shape-magnets');
+}
+
+    // Greeting Cards Overview
+    public function showGreetingCards()
+    {
+        return view('print-products.greeting-cards.greeting-cards');
+    }
+
+    // Matte Finish Greeting Cards
+    public function showMatteFinishGreetingCards()
+    {
+        return view('print-products.greeting-cards.matte-finish');
+    }
+
+    // High Gloss Greeting Cards
+    public function showHighGlossGreetingCards()
+    {
+        return view('print-products.greeting-cards.high-gloss');
+    }
+
+    // AQ Greeting Cards
+    public function showAQGreetingCards()
+    {
+        return view('print-products.greeting-cards.aq');
+    }
+
+    // Writable Greeting Cards Subcategories
+    public function show13ptEnviroGreetingCards()
+    {
+        return view('print-products.greeting-cards.13pt-enviro');
+    }
+
+    public function show14ptWritableAQGreetingCards()
+    {
+        return view('print-products.greeting-cards.14pt-writable-aq');
+    }
+
+    public function show14ptWritableUVGreetingCards()
+    {
+        return view('print-products.greeting-cards.14pt-writable-uv');
+    }
+
+    // Specialty Greeting Cards Subcategories
+    public function showMetallicFoilGreetingCards()
+    {
+        return view('print-products.greeting-cards.metallic-foil');
+    }
+
+    public function showSpotUVGreetingCards()
+    {
+        return view('print-products.greeting-cards.spot-uv');
+    }
+
+    public function showKraftPaperGreetingCards()
+    {
+        return view('print-products.greeting-cards.kraft-paper');
+    }
+
+    public function showPearlPaperGreetingCards()
+    {
+        return view('print-products.greeting-cards.pearl-paper');
+    }
+}

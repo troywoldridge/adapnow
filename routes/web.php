@@ -76,3 +76,50 @@ Route::get('/print-products/flyers/uv', [ProductController::class, 'showUVFlyers
 Route::get('/print-products/flyers/enviro', [ProductController::class, 'showEnviroFlyers'])->name('flyers.enviro');
 Route::get('/print-products/flyers/linen', [ProductController::class, 'showLinenFlyers'])->name('flyers.linen');
 
+// Brochures Landing Page
+Route::get('/print-products/brochures', [ProductController::class, 'showBrochures'])->name('print-products.brochures');
+
+// Brochures Subcategories
+Route::get('/print-products/brochures/gloss-text', [ProductController::class, 'showGlossTextBrochures'])->name('brochures.gloss-text');
+Route::get('/print-products/brochures/matte-finish', [ProductController::class, 'showMatteFinishBrochures'])->name('brochures.matte-finish');
+Route::get('/print-products/brochures/uv-high-gloss', [ProductController::class, 'showUVHighGlossBrochures'])->name('brochures.uv-high-gloss');
+
+
+// Presentation Folders Overview
+Route::get('/print-products/presentation-folders', [ProductController::class, 'showPresentationFolders'])->name('print-products.presentation-folders');
+
+// Subcategories of Presentation Folders
+Route::get('/print-products/presentation-folders/standard-matte', [ProductController::class, 'showStandardMatteFolder'])->name('presentation-folders.standard-matte');
+Route::get('/print-products/presentation-folders/standard-uv', [ProductController::class, 'showStandardUVFolder'])->name('presentation-folders.standard-uv');
+Route::get('/print-products/presentation-folders/matte-laminated', [ProductController::class, 'showMatteLaminatedFolder'])->name('presentation-folders.matte-laminated');
+Route::get('/print-products/presentation-folders/metallic-foil', [ProductController::class, 'showMetallicFoilFolder'])->name('presentation-folders.metallic-foil');
+
+
+// Magnets Overview
+Route::get('/print-products/magnets', [ProductController::class, 'showMagnets'])->name('print-products.magnets');
+
+// Subcategories for Magnets
+Route::get('/print-products/magnets/standard-magnets', [ProductController::class, 'showStandardMagnets'])->name('magnets.standard');
+Route::get('/print-products/magnets/cut-to-shape-magnets', [ProductController::class, 'showCutToShapeMagnets'])->name('magnets.cut-to-shape');
+
+// Greeting Cards Overview
+Route::get('/print-products/greeting-cards', [ProductController::class, 'showGreetingCards'])->name('greeting-cards');
+
+// Individual Greeting Card Categories and Subcategories
+Route::get('/print-products/greeting-cards/matte-finish', [ProductController::class, 'showMatteFinishGreetingCards'])->name('greeting-cards.matte-finish');
+
+Route::get('/print-products/greeting-cards/high-gloss', [ProductController::class, 'showHighGlossGreetingCards'])->name('greeting-cards.high-gloss');
+
+Route::get('/print-products/greeting-cards/aq', [ProductController::class, 'showAQGreetingCards'])->name('greeting-cards.aq');
+
+// Writable Greeting Cards Subcategories
+Route::get('/print-products/greeting-cards/13pt-enviro', [ProductController::class, 'show13ptEnviroGreetingCards'])->name('greeting-cards.13pt-enviro');
+Route::get('/print-products/greeting-cards/14pt-writable-aq', [ProductController::class, 'show14ptWritableAQGreetingCards'])->name('greeting-cards.14pt-writable-aq');
+Route::get('/print-products/greeting-cards/14pt-writable-uv', [ProductController::class, 'show14ptWritableUVGreetingCards'])->name('greeting-cards.14pt-writable-uv');
+
+// Specialty Greeting Cards Subcategories
+Route::get('/print-products/greeting-cards/metallic-foil', [ProductController::class, 'showMetallicFoilGreetingCards'])->name('greeting-cards.metallic-foil');
+Route::get('/print-products/greeting-cards/spot-uv', [ProductController::class, 'showSpotUVGreetingCards'])->name('greeting-cards.spot-uv');
+Route::get('/print-products/greeting-cards/kraft-paper', [ProductController::class, 'showKraftPaperGreetingCards'])->name('greeting-cards.kraft-paper');
+Route::get('/print-products/greeting-cards/pearl-paper', [ProductController::class, 'showPearlPaperGreetingCards'])->name('greeting-cards.pearl-paper');
+

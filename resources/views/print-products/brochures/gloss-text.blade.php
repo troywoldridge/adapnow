@@ -5,23 +5,22 @@
     <div class="row">
         <!-- Product Image -->
         <div class="col-md-6">
-            <img src="{{ asset('images/all-images/100lb-uv-high-gloss-flyers.jpg') }}" class="img-fluid" alt="Gloss Text Flyers">
+            <img src="{{ asset('images/all-images/100lb-gloss-text-brochures.jpg') }}" class="img-fluid" alt="Gloss Text Brochures">
         </div>
 
         <!-- Product Details and Order Form -->
         <div class="col-md-6">
-            <h1>100lb UV High Gloss Flyers</h1>
-            <p>Flyers are great marketing tools that can be used to promote products and services. These flyers offer a glossy and shiny look easily catch the eye.</p>
+            <h1>Gloss Text Brochures</h1>
+            <p>Our Gloss Text Brochures are printed on high-quality, shiny paper, offering a vibrant and professional finish. These brochures are perfect for colorful designs and impactful marketing materials.</p>
 
             <div class="product-order-box">
                 <h4>Price this item:</h4>
                 <form>
-                    <!-- Add dropdowns for stock, size, quantity, etc. -->
+                    <!-- Stock Dropdown -->
                     <div class="form-group">
                         <label for="stock">Stock</label>
                         <select id="stock" class="form-control">
-                            <option value="single">Single Side Printing (4/0)</option>
-                            <option value="double">Double Sided Printing (4/4)</option>
+                            <option value="gloss-text">Gloss Text Paper</option>
                         </select>
                     </div>
 
@@ -29,22 +28,12 @@
                     <div class="form-group">
                         <label for="size">Size</label>
                         <select id="size" class="form-control">
-                        <option value="3.5x8.5">3.5 x 8.5</option>
-                        <option value="8.5x5.5">8.5 x 5.5</option>
-                        <option value="4.25x11">4.25 x 11</option>
-                        <option value="8.5x7">8.5 x 7</option>
-                        <option value="8.5x7.5">8.5x7.5</option>
-                        <option value="8x10">8 x 10</option>
-                        <option value="8.5x11">8.5 x 11</option>
-                        <option value="8.5x14">8.5 x 14</option>
-                        <option value="9x12">9 x 12</option>
-                        <option value="9x16">9 x 16</option>
-                        <option value="8.5x17">8.5 x 17</option>
-                        <option value="11x17">11 x 17</option>
-                        <option value="11.5x17.5">11.5 x 17.5</option>
-                        <option value="12x18">12 x 18</option>
-                        <option value="17x22">17 x 22</option>
-                        <option value="11x25.5">11 x 25.5</option>
+                            <option value="8.5x11">8.5 x 11</option>
+                            <option value="11x17">11 x 17</option>
+                            <option value="8.5x14">8.5 x 14</option>
+                            <option value="9x12">9 x 12</option>
+                            <option value="17x22">17 x 22</option>
+                            <option value="11x25.5">11 x 25.5</option>
                         </select>
                     </div>
 
@@ -52,6 +41,9 @@
                     <div class="form-group">
                         <label for="qty">Quantity</label>
                         <select id="qty" class="form-control">
+                            <option value="25">25</option>
+                            <option value="50">50</option>
+                            <option value="75">75</option>
                             <option value="100">100</option>
                             <option value="250">250</option>
                             <option value="500">500</option>
@@ -86,40 +78,49 @@
 
                     <!-- Coating Dropdown -->
                     <div class="form-group">
-                        <label for="Coating">Coating</label>
-                        <select id="Coating" class="form-control">
-                            <option value="Matte Finish">High Gloss UV</option>
-                        </select>
-                    </div>
-                    <!-- Bundling Dropdown -->
-                    <div class="form-group">
-                        <label for="bundling">Bundling</label>
-                        <select id="bundling" class="form-control">
-                            <option value="No Bundling">No Bundling - Free</option>
-                            <option value="Single band 25s">Single Bands 25s</option>
-                            <option value="Single band 50s">Single Band 50s</option>
-                            <option value="Single band 100s">Single Band 100s</option>
-                            <option value="Double band 25s">Double Band 25s</option>
-                            <option value="Double band 50s">Double Band 50s</option>
-                            <option value="Double band 100s">Double Band 100s</option>
-                            <option value="Shrink wrap 25s">Shrink Wrap 25s</option>
-                            <option value="Shrink wrap 50s">Shrink Wrap 50s</option>
-                            <option value="Shrink wrap 100s">Shrink Wrap 100s</option>
+                        <label for="coating">Coating</label>
+                        <select id="coating" class="form-control">
+                            <option value="gloss-text">Gloss Text</option>
                         </select>
                     </div>
 
-                    <!-- Turnaround Dropdown -->
+                    <!-- Folding Option -->
+                    <div class="form-group">
+                        <label for="fold">Folding Options</label>
+                        <select id="fold" class="form-control">
+                            <option value="half-fold">Half Fold</option>
+                            <option value="tri-fold">Tri-Fold</option>
+                            <option value="z-fold">Z-Fold</option>
+                            <option value="roll-fold">Roll Fold</option>
+                            <option value="double-parallel-fold">Double Parallel Fold</option>
+                            <option value="8-page-fold">8 Page Fold</option>
+                            <option value="4-panel-accordion-fold">4 Panel Accordion Fold</option>
+                            <option value="double-gate-fold">Double Gate Fold</option>
+                            <option value="gate-fold">Gate Fold</option>
+                            <option value="score-and-half">Score And Half</option>
+                            <option value="score-and-tri-fold">Socre And Tri Fold</option>
+                            <option value="score-and-roll-fold">Score And Roll Fold</option>
+                            <option value="score-and-z-fold">Score And Z Fold</option>
+                            <option value="score-double-parallel-fold">Score And Double Parallel Fold</option>
+                        </select>
+                    </div>
+
+                    <!-- Turnaround Time -->
                     <div class="form-group">
                         <label for="turnaround">Turnaround</label>
                         <select id="turnaround" class="form-control">
-                            <option value="4-5 Business Days">4-5 Business Days</option>
+                            <option value="standard">Standard (4 Business Days)</option>
                         </select>
-                         <!-- Price -->
+                    </div>
+
+                    <!-- Price Display -->
                     <div class="product-price">
                         <h4>Regular Price:</h4>
-                        <p>$26.00</p>
+                        <p>$42.00</p>
                     </div>
-                    </div>
+
+                    <!-- Add to Cart Button -->
+                    <button type="button" class="btn btn-primary">Add to Cart</button>
                 </form>
             </div>
         </div>
@@ -143,31 +144,36 @@
             <div class="tab-content" id="productTabContent">
                 <!-- Details Tab -->
                 <div class="tab-pane fade show active" id="details" role="tabpanel">
-                    <h5>Product Details for UV High Gloss Flyers</h5>
-                    <p>100lb Glossy Text Stock</p>
-                    <p>Quantities Ranges From 25 to 100000</p>
-                    <p>Color: Full color CMYK: 1 sided (4/0), or 2 Sided (4/4)</p>
-                    <p>Finishing: Cut to Size and Boxed. Optional Bundeling Available</p>
-                    <p>Special Instructions: Flyers are shipped flat with no folding</p>
-                    
+                    <h5>Product Details for Gloss Text Brochures</h5>
+                    <p><strong>Paper Type:</strong> High-Quality Gloss Text</p>
+                    <p><strong>Sizes:</strong> 8.5 x 11, 8.5 x 14, 9 x 12, 11 x 17, 17 x 22, 11 x 25.5</p>
+                    <p><strong>Coating:</strong> Gloss Finish</p>
+                    <p><strong>Folding Options:</strong> Half Fold, Tri-Fold, Z-Fold, Rolled Fold, 4 Panel Accordion Fold, 8 Page Fold, Double Parallel Fold, Gate Fold, Double Gate Fold, Z fold, Score and Half, Score and Roll, Score and Z Fold Score, Double Parallel Fold, Score and Tri Fold </p>
+                    <p><strong>Quantities:</strong> 25 to 100,000</p>
                 </div>
 
                 <!-- File Prep Tab -->
                 <div class="tab-pane fade" id="fileprep" role="tabpanel">
-                    <h5>File Prep for 100lb UV High Gloss Flyers</h5>
-                    <p>Ensure your file meets these specifications:</p>
+                    <h5>File Prep for Gloss Text Brochures</h5>
+                    <p>Ensure your file meets the following requirements:</p>
                     <ul>
                         <li>Resolution: 300 DPI</li>
-                        <li>Bleed: 1/16 inch on all sides</li>
+                        <li>Bleed: 1/8 inch on all sides</li>
                         <li>Color Mode: CMYK</li>
-                        <li>File Type: PDF format with bleeds</li>
+                        <li>File Format: PDF with bleeds</li>
+                        <li>SPECIAL INSTRUCTIONS: We highly recommend selecting a fold type with scoring to help minimize cracking when folded Learn More
+
+                            The size selected refers to the open size of the brochure. Folding will result in a smaller finished size.
+                            
+                            Art should match folding template as per instructions (i.e. fold, cut and bleed lines are to be followed). Failing to do so will result in delays and/or unexpected results.</li>
                     </ul>
                 </div>
 
                 <!-- Reviews Tab -->
                 <div class="tab-pane fade" id="reviews" role="tabpanel">
                     <h5>Customer Reviews</h5>
-                    <p>★★★★★ "Great quality and fast shipping!"</p>
+                    <p>★★★★★ "Amazing print quality and great service!"</p>
+                    <p>★★★★ "Fast delivery and professional finish."</p>
                 </div>
             </div>
         </div>

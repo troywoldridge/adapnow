@@ -1,0 +1,156 @@
+@extends('layouts.main')
+
+@section('content')
+<div class="container product-page my-5">
+    <div class="row">
+        <!-- Product Image -->
+        <div class="col-md-6">
+            <img src="{{ asset('images/all-images/metallic-foil-prsentation-folder.png') }}" class="img-fluid" alt="Standard Matte laminated Folder">
+        </div>
+
+        <!-- Product Details and Order Form -->
+        <div class="col-md-6">
+            <h1>Metallic Foil Presentation Folder</h1>
+            <p>Elevate your professional image with our Presentation Folder featuring raised metallic foil. Choose from silver or gold foil on the front cover for a luxurious touch. Organize and protect your important documents with its durable construction and spacious pockets. Make a lasting impression with our sophisticated and attention-grabbing presentation folder.</p>
+
+            <div class="product-order-box">
+                <h4>Price this item:</h4>
+                <form>
+                    <!-- Stock Dropdown -->
+                    <div class="form-group">
+                        <label for="stock">Stock</label>
+                        <select id="stock" class="form-control">
+                            <option value="printed 1 side">Printed 1 Side</option>
+                            <option value="printed both sides">Printed Both Sides</option>
+                        </select>
+                    </div>
+
+                    <!-- Size Dropdown -->
+                    <div class="form-group">
+                        <label for="size">Size</label>
+                        <select id="size" class="form-control">
+                            <option value="9x12-3-inch-Pocket">9 x 12 3" Pocket</option>
+                            <option value="9x12-4-inch-pocket">9 x 12 4" Pocket</option>
+                        </select>
+                    </div>
+
+                    <!-- Quantity Dropdown -->
+                    <div class="form-group">
+                        <label for="qty">Quantity</label>
+                        <select id="qty" class="form-control">
+                            <option value="100">100</option>
+                            <option value="250">250</option>
+                            <option value="500">500</option>
+                        </select>
+                    </div>
+
+                    <!-- Buisness Card Slit -->
+                    <div class="form-group">
+                        <label for="Business Card Slit">Business Card Slit</label>
+                        <select id="stock" class="form-control">
+                            <option value="rone">None</option>
+                            <option value="right">Right</option>
+                            <option value="left">Left</option>
+                            <option value="both">Both</option>
+                        </select>
+                    </div>
+
+                    <!-- Pockets -->
+                    <div class="form-group">
+                        <label for="Pockets">Pockets</label>
+                        <select id="stock" class="form-control">
+                            <option value="two pockets">Two Pockets</option>
+                            <option value="inside-right-pocket-only">Inside Right Pocket Only</option>
+                        </select>
+                    </div>
+
+                    <!-- Foil Color -->
+                    <div class="form-group">
+                        <label for="Foil Color">Foil Color</label>
+                        <select id="stock" class="form-control">
+                            <option value="gold-outside-only">Gold Outside Only</option>
+                            <option value="silver-outside-only">Silver Outside Only</option>
+                        </select>
+                    </div>
+
+                    <!-- Metallic foil coverages -->
+                    <div class="form-group">
+                        <label for="metallic-foil-coverages">Metallic Foil Coverage</label>
+                        <select id="stock" class="form-control">
+                            <option value="1%-25%">1% - 25%</option>
+                            <option value="26%-40%">26% - 40%</option>
+                            <option value="41%-75%">41% - 75%</option>
+                        </select>
+                    </div>
+
+                     <!-- Turnaround -->
+                     <div class="form-group">
+                        <label for="turnaround">Turnaround</label>
+                        <select id="stock" class="form-control">
+                            <option value="5-8-Business-Days">5-8 Business Days</option>
+                        </select>
+                    </div>
+
+                    <!-- Price -->
+                    <div class="product-price">
+                        <h4>Regular Price:</h4>
+                        <p>$525.00</p>
+                    </div>
+
+                    <!-- Add to Cart Button -->
+                    <button type="button" class="btn btn-primary">Add to Cart</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tabs for Details, File Prep, and Reviews -->
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <ul class="nav nav-tabs" id="productTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="details-tab" data-toggle="tab" href="#details" role="tab">Details</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="fileprep-tab" data-toggle="tab" href="#fileprep" role="tab">File Prep</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="reviews-tab" data-toggle="tab" href="#reviews" role="tab">Reviews</a>
+                </li>
+            </ul>
+
+            <div class="tab-content" id="productTabContent">
+                <!-- Details Tab -->
+                <div class="tab-pane fade show active" id="details" role="tabpanel">
+                    <h5>Product Details for Metallic Foil Folder</h5>
+                    <p><strong>Size:</strong>9x12  9x14.5</p>
+                    <p><strong>Quantities</strong>Ranges from 100 to 500</p>
+                    <p><strong>Paper Type:</strong>95 Bright 14pt Gloss C2S Stock</p>
+                    <p><strong>Coating:</strong>Metallic Foil Finish Choice of Gold Or Silver</p>
+                    <p><strong>Printing:</strong> Full-color printing on front and back</p>
+                    <p><strong>Finishing:</strong> trim, Die-cut,glue and box</p>
+                </div>
+
+                <!-- File Prep Tab -->
+                <div class="tab-pane fade" id="fileprep" role="tabpanel">
+                    <h5>File Prep for Metallic Foil Folder</h5>
+                    <p>Make sure your file meets the following specifications:</p>
+                    <ul>
+                        <li>Resolution: 300 DPI</li>
+                        <li>Bleed: 0.125 inches on all sides</li>
+                        <li>Color Mode: CMYK</li>
+                        <li>File Type: PDF format with bleeds</li>
+                    </ul>
+                </div>
+
+                <!-- Reviews Tab -->
+                <div class="tab-pane fade" id="reviews" role="tabpanel">
+                    <h5>Customer Reviews</h5>
+                    <p>★★★★★ "Great quality and quick turnaround!"</p>
+                    <p>★★★★ "Very happy with the product."</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection

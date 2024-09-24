@@ -36,7 +36,7 @@
                     <li><a href="{{ route('print-products.presentation-folders') }}">Presentation Folders</a></li>
                     <li><a href="{{ route('print-products.booklets') }}">Booklets</a></li>
                     <li><a href="{{ route('print-products.magnets') }}">Magnets</a></li>
-                    <li><a href="{{ route('print-products.greeting-cards') }}">Greeting Cards</a></li>
+                    <li><a href="{{ route('greeting-cards') }}">Greeting Cards</a></li>
                     <li><a href="{{ route('print-products.invitations') }}">Invitations / Announcements</a></li>
                     <li><a href="{{ route('print-products.numbered-tickets') }}">Numbered Tickets</a></li>
                     <li><a href="{{ route('print-products.wall-calendars') }}">Wall Calendars</a></li>
